@@ -8,7 +8,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { CloudCog } from "lucide-react";
 
 interface Category {
   name: string;
@@ -26,7 +25,7 @@ export function DefaultDropdown({ title, leftIcon, rightIcon, labelTitle, items 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <Button variant="outline">{leftIcon}{title}{rightIcon}</Button>
+        <Button variant="outline" className="cursor-pointer">{leftIcon}{title}{rightIcon}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuGroup>

@@ -91,33 +91,30 @@ export function DefaultHeader() {
 
       <div className="bg-marketplace-orange text-white shadow-md">
         <div className="max-w-7xl mx-auto max-h-12 px-4 flex items-center text-sm font-bold uppercase overflow-x-auto whitespace-nowrap no-scrollbar hide-scroll">
-          <Button variant="ghost" className="flex items-center gap-2 h-12 px-3 hover:bg-black/10 hover:text-white text-white rounded-none cursor-pointer shrink-0 font-bold">
-          
-          </Button>
 
           
           
           <div className="flex items-center h-12">
             <DefaultDropdown title="CATEGORIAS" leftIcon={<ListIcon  size={20} />} items={categories} />
-            <Button variant="ghost"  className="px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
+            <Button variant="ghost"  className="cursor-pointer ml-4 px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
               <a href="#">HARDWARE</a>
             </Button>
-            <Button variant="ghost"  className="px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
+            <Button variant="ghost"  className="cursor-pointer px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
               <a href="#">COMPUTADORES</a>
             </Button>
-            <Button variant="ghost" className="px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
+            <Button variant="ghost" className="cursor-pointer px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
               <a href="#">MONITORES</a>
             </Button>
-            <Button variant="ghost"  className="px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
+            <Button variant="ghost"  className="cursor-pointer px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
               <a href="#">GAMER</a>
             </Button>
-            <Button variant="ghost" className="px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
+            <Button variant="ghost" className="cursor-pointer px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
               <a href="#">SMARTPHONES</a>
             </Button>
-            <Button variant="ghost" className="px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
+            <Button variant="ghost" className="cursor-pointer px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
               <a href="#">TVs</a>
             </Button>
-            <Button variant="ghost" className="px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
+            <Button variant="ghost" className="cursor-pointer px-4 h-full flex items-center hover:bg-black/10 hover:text-white text-white rounded-none">
               <a href="#">OFERTAS DO DIA</a>
             </Button>
           </div>
