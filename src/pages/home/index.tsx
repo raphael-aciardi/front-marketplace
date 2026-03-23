@@ -1,10 +1,15 @@
+import Carousel from "@components/Carousel"
 import DefaultTemplate from "@/templates/Default"
+import { Card } from "@/components/ui/card"
 
 const  Home = ()  =>  {
     return (
   <DefaultTemplate>
-        <h1>Home</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+        <h1>Você está em Hardware</h1>
+        <Carousel />
+        <main>
+
+        </main>
     </DefaultTemplate>
     )
 }

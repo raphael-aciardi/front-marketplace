@@ -1,0 +1,134 @@
+.embla {
+  --slide-spacing: 1.5rem;
+  --slide-size: 80%; /* Show more of the next/prev slides */
+  --slide-height: 400px; /* Make it a bit taller and premium */
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 0;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  height: var(--slide-height);
+  position: relative;
+}
+
+/* Image acts as the visual container */
+.embla__slide__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Soft elegant shadow */
+  
+  /* Smooth transitions for a premium feel */
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  
+  /* Inactive state */
+  opacity: 0.4; 
+  transform: scale(0.9);
+}
+
+/* ✨ A Mágica: Estilo aplicado apenas no slide ativo */
+.embla__slide.is-snapped .embla__slide__img {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15); /* Elevated shadow on active */
+}
+
+/* Controles */
+.embla__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.embla__dot {
+  appearance: none;
+  background-color: #cbd5e1; /* Slate 300 */
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Make hovered dots slightly darker */
+.embla__dot:hover {
+  background-color: #94a3b8; /* Slate 400 */
+}
+
+/* Active dot is wider and colored */
+.embla__dot--selected {
+  background-color: var(--marketplace-orange); /* Vibrant brand color */
+  width: 1.8rem;
+  border-radius: 1rem;
+}
+
+.embla__button {
+  position: absolute;
+  top: calc(20px + (var(--slide-height) / 2));
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  color: #334155;
+}
+
+.embla__button:hover {
+  background-color: #f8fafc;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.embla__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: translateY(-50%) scale(1);
+}
+
+.embla__button--prev {
+  left: 3%;
+}
+
+.embla__button--next {
+  right: 3%;
+}
