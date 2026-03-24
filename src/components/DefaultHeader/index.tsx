@@ -20,15 +20,7 @@ export function DefaultHeader() {
 
   return (
     <header className="w-full font-sans">
-      <div className="bg-marketplace-blue text-white text-xs py-1 px-4 flex justify-between items-center border-b border-marketplace-blue-dark">
-        <div className="flex gap-4  mx-auto w-full px-4">
-          <a href="#" className="flex items-center gap-1 hover:underline">
-            <Headphones size={14} /> Atendimento
-          </a>
-          <a href="#" className="hover:underline">Venda no Marketplace!</a>
-          <a href="#" className="hover:underline">Seja Prime</a>
-        </div>
-      </div>
+
 
       <div className="bg-marketplace-blue text-white">
         <div className="px-10 mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -46,16 +38,7 @@ export function DefaultHeader() {
           </div>
 
           <div className="flex-1 w-full relative max-w-3xl order-last md:order-none">
-            <div className="flex w-full bg-white rounded overflow-hidden h-11 border-2 border-transparent focus-within:border-blue-400 transition-all">
-              <Input 
-                type="text" 
-                placeholder="Busque por produtos, marcas e muito mais..." 
-                className="flex-1 h-full px-4 text-gray-700 text-sm border-none shadow-none rounded-l-md focus-visible:ring-0 placeholder:text-gray-400"
-              />
-              <Button className="w-14 h-full bg-marketplace-orange rounded-r-md hover:bg-marketplace-orange-hover transition-colors">
-                <Search size={22} className="text-white" />
-              </Button>
-            </div>
+
           </div>
 
           <div className="hidden md:flex items-center gap-8 justify-end">
